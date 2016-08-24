@@ -11,10 +11,10 @@
                 </div>
                 <div ng-repeat="item in todo.itemsToRender track by item.content+item._id">
 
-                    <item content="item.content" on-delete="todo.deleteItem($index)" on-save="todo.saveItem(item)"></item>
+                    <item content="item.content" on-delete="todo.deleteItem(item)" on-save="todo.saveItem(item)"></item>
 
                 </div>
-                <ul uib-pagination ng-model="todo.currentPage" max-size="todo.maxSize" rotate="true" total-items="todo.items.length" items-per-page="todo.itemsPerPage" ng-change="todo.setPage()" class="pagination-sm"></ul>
+                <ul uib-pagination ng-model="todo.currentPage" max-size="todo.maxSize" rotate="true" total-items="todo.getItemsLength()" items-per-page="todo.itemsPerPage" ng-change="todo.setPage()" class="pagination-sm"></ul>
             </div>
 
         </div>

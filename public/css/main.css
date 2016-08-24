@@ -41,8 +41,6 @@ footer {
     box-sizing: border-box;
 }
 
-.list-item .content {
-    text-align: left;
-    max-width: 50%;
-    display: inline-block;
+.list-item .pull-left {
+    line-height: 36px;
 }

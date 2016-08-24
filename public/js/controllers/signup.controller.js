@@ -12,14 +12,12 @@
 		function sendForm() {
 			userService.signUp(vm.formData)
 				.then(function (data) {
-					console.log(data);
 					toasterService.success(data);
 					$state.go('todo');
 					tokenService.set(data.token);
 
 				})
 				.catch(function (data) {
-					console.log(data);
 					toasterService.error(data);
 				})
 		}

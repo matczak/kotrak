@@ -1,10 +1,11 @@
 <div class="list-item">
     <div ng-if="!item.edit">
-        {{::item.content}}
-        <div class="btn-group">
+        <div class="pull-left">{{::item.content}}</div>
+        <div class="btn-group pull-right">
             <button ng-if="!item.edit" type="button" class="btn btn-default" ng-click="item.editItem()">Edit</button>
             <button ng-if="!item.edit" type="button" class="btn btn-default" ng-click="item.deleteItem()">Delete</button>
         </div>
+        <div class="clearfix"></div>
     </div>
 
     <div ng-if="item.edit">

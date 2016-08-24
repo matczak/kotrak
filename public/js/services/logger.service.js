@@ -30,10 +30,9 @@ function logger($q, $http, tokenService) {
 				}
 			}).then(function (response) {
 				return complete(response, resolve, reject);
-			})
-				.catch(function (error) {
-					return reject(error);
-				});
+			}).catch(function (error) {
+				return reject(error);
+			});
 		})
 	}
 
@@ -83,13 +82,11 @@ function logger($q, $http, tokenService) {
 					'Content-Type': 'application/x-www-form-urlencoded',
 					'x-access-token': tokenService.get()
 				}
+			}).then(function (response) {
+				return complete(response, resolve, reject);
+			}).catch(function (error) {
+				return reject(error);
 			})
-				.then(function (response) {
-					return complete(response, resolve, reject);
-				})
-				.catch(function (error) {
-					return reject(error);
-				})
 		});
 	}
 
