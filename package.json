@@ -1,0 +1,12 @@
+{
+  "name": "kotrak",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express-session": "latest",
+    "express": "latest",
+    "jsonwebtoken": "^5.7.0",
+    "mongoose": "^4.4.5",
+    "morgan": "^1.7.0"
+  }
+}

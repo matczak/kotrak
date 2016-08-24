@@ -1,0 +1,17 @@
+<div class="list-item">
+    <div ng-if="!item.edit">
+        {{::item.content}}
+        <div class="btn-group">
+            <button ng-if="!item.edit" type="button" class="btn btn-default" ng-click="item.editItem()">Edit</button>
+            <button ng-if="!item.edit" type="button" class="btn btn-default" ng-click="item.deleteItem()">Delete</button>
+        </div>
+    </div>
+
+    <div ng-if="item.edit">
+        <input ng-if="item.edit" ng-model="item.content" class="form-control" ng-value="item.content">
+        <div class="btn-group">
+            <button ng-if="item.edit" type="button" class="btn btn-default" ng-click="item.saveItem()">Save</button>
+        </div>
+    </div>
+
+</div>

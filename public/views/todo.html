@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 text-center">
+            <div class="todo-wrapper">
+                <form class="todo-form" ng-submit="todo.addItem()">
+                    <input ng-model="todo.item" type="text" class="form-control">
+                    <button class="btn btn-primary" type="submit">Add item</button>
+                </form>
+                <div class="search">
+                    <input ng-model="todo.searchText" ng-change="todo.search()" placeholder="search..." ng-model-options="{debounce: 500}" type="text" class="form-control">
+                </div>
+                <div ng-repeat="item in todo.itemsToRender track by item.content+item._id">
+
+                    <item content="item.content" on-delete="todo.deleteItem($index)" on-save="todo.saveItem(item)"></item>
+
+                </div>
+                <ul uib-pagination ng-model="todo.currentPage" max-size="todo.maxSize" rotate="true" total-items="todo.items.length" items-per-page="todo.itemsPerPage" ng-change="todo.setPage()" class="pagination-sm"></ul>
+            </div>
+
+        </div>
+    </div>
+</div>

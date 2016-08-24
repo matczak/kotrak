@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    /*background: #034B97;*/
+
+    background: #e9ebee;
+    margin: 0 0 20px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.todo-form {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.todo-form .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    display: inline-block;
+    padding: 10px;
+    max-width: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.list-item {
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.list-item .content {
+    text-align: left;
+    max-width: 50%;
+    display: inline-block;
+}

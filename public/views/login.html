@@ -1,0 +1,19 @@
+<div class="container" ng-if="!login.login">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <h1 class="text-center login-title">Sign in to continue to timer</h1>
+                <form class="form-signin" ng-submit="login.sendForm()">
+                    <input type="text" class="form-control" placeholder="username" ng-model="login.formData.name"
+                           required autofocus>
+                    <input type="password" class="form-control" placeholder="password"
+                           ng-model="login.formData.password" required>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        Sign in
+                    </button>
+                </form>
+            </div>
+            <a ui-sref="signUp" class="text-center new-account">Create an account </a>
+        </div>
+    </div>
+</div>
