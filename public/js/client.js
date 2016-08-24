@@ -7,12 +7,6 @@
 	config.$inject = ['$stateProvider', '$urlRouterProvider'];
 	function config($stateProvider, $urlRouterProvider) {
 
-		// if (USER_LOGGED) {
-		// 	$urlRouterProvider.otherwise('times');
-		// } else {
-		// 	localStorage.removeItem('user');
-		// 	$urlRouterProvider.otherwise('login');
-		// }
 		$urlRouterProvider.otherwise('login');
 
 		$stateProvider
